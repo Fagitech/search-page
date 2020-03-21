@@ -18,16 +18,14 @@ main{
 
 .logo {
     background: url("assets/svg/search.svg") no-repeat center center;
-    background-size: 192px;
     display: inline-block;
+    background-size: 125px;
     height: 125px;
     width: 125px;
 }
 
 .search-box{
     display: flex;
-    align-items: center;
-    margin: 16px;
     border: 1px solid #5f5f63;
     border-radius: 4px;
     width: 720px;
@@ -39,24 +37,29 @@ main{
     outline: none;
     background: none;
     border: none;
-    color: aliceblue;
+    color: #ababae;
     font-size: 16px;
     flex-grow: 1;
-    margin: 0 16px;
+    margin: 0 4px;
 }
 
-.search-icon{
-    background: url("assets/svg/forward.svg") no-repeat;
-    background-position-x: center;
-    background-position-y: center;
+#search{
+    background: url("assets/svg/search.svg") no-repeat center center;
     padding: 24px;
-    height: 0;
-    width: 0;
 }
 
-.search-icon:hover{
+#search:hover, #clear:hover{
     background-color: rgba(12, 12, 13, 0.1);
     cursor: pointer;
+}
+
+input:placeholder-shown ~ #clear {
+    display: none;
+}
+
+#clear{
+    background: url("assets/svg/clear.svg") no-repeat center center;
+    padding: 24px;
 }
 
 @media screen and (max-width: 960px) {
